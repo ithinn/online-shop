@@ -8,7 +8,7 @@ const products =
 		size: [86, 92, 104],
 		quality1: ["vannavstøtende", 'vindtett'],
 		price: "255",
-		url: ['../images/jackets/dalfonna1.jpg', '../images/jackets/dalfonna2.jpg', '../images/jackets/dalfonna3.jpg', '../images/jackets/dalfonna4'],
+		url: ['./images/jackets/dalfonna1.jpg', './images/jackets/dalfonna2.jpg', './images/jackets/dalfonna3.jpg', './images/jackets/dalfonna4'],
 		ingress: "Jakken er nydelig på skitur, i akebakken og på vei til barnehagen en kald høstdag",
 		id: 0,
 		amount: 0, 
