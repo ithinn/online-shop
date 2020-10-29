@@ -129,6 +129,9 @@ const seePopUp = (evt) => {
     fjern = document.getElementById("det_remove");
     fjern.addEventListener("click", removePopUp);
     addEventButton();   
+
+    //sett fokus
+    document.getElementById("colorButton0").focus();
 }
 
 //-----------------------------------------------------------------------------

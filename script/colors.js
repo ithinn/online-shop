@@ -20,7 +20,7 @@ const colorCodes =
     },
     {
         clrName: 'Grå',
-        clrHex: "#808080"
+        clrHex: "#5e5c5c"
     },
     {
         clrName: 'Lilla',

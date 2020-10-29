@@ -23,10 +23,10 @@ const addObjects = (array) => {
         </div>
             <h4 id="${array[i].id}" class="prod_h4">${array[i].name}</h4>
         <h4 class="price">${array[i].price},-</h4>
-        <article class="clr_icon colorWrap" id="colorWrap">      
+        <article class="clr_icon colorWrap">      
         `+ fargeString + `
         </article>
-        <article id="buttonWrap">
+        <article class="buttonWrap">
             <button id="btn_${array[i].id}" class="btn_submit">Les mer</button>
         </article>
         </article>

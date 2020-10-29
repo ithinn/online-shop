@@ -47,7 +47,7 @@
 
 /*Fargefiltersymboler*/
 
-#colorWrap {
+.colorWrap {
     display: flex;
 }
 

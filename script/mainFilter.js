@@ -2,7 +2,7 @@ let categoryArray = ["Jakker", "Bukser"];
 let c_u_arr = ['Dunjakke', 'Skalljakke', 'Fleece', 'Regnjakke', "Overtrekksbukse", "Regnbukse", "Ullbukse" ];
 let allSizes = [86, 92, 98, 104, 110, 116, 122];
 let qualities = ['vannavstøtende', 'vindtett', 'vanntett', 'varm', 'strikk'];
-let colors = ['#707312', '#c1272d', '#5270ae', '#333333', '#808080', "#73434b"];
+let colors = ['#707312', '#c1272d', '#5270ae', '#333333', '#5e5c5c', "#73434b"];
 const filterWrap = document.getElementById("filter_wrap");
 let uniCat = [];
 let mainCatArray = [];
@@ -253,9 +253,9 @@ const addColor = (a) => {
             <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #73434b; color: #ffffff;">${hexToClr(el)}</button>
             `; 
     
-        } else if (el === '#808080') {
+        } else if (el === '#5e5c5c') {
             html += `
-            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #808080; color: #ffffff;">${hexToClr(el)}</button>
+            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #5e5c5c; color: #ffffff;">${hexToClr(el)}</button>
             `; 
         }
    })

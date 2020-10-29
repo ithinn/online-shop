@@ -25,6 +25,9 @@
 .btn_submit:active, .buyThis:active {
     border: 4px solid #2F3659;
 }
+.btn_submit:focus, .buyThis:focus {
+    border: 4px solid #2F3659;
+}
 
 button:hover, #btn_small:hover {
     background-color: #A6831B;
