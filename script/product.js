@@ -41,8 +41,8 @@ const seePopUp = (evt) => {
             <article id="main_container">
                 <img id="main_img" alt="Foto av ${e.cathegory_main} med produktnavn ${e.name}" src=${e.url[0]}>
                 <div id="arrows">
-                    <img id="arrow_l" src="./images/icons/arrow_left.png">
-                    <img id="arrow_r" src="./images/icons/arrow_right.png">
+                    <img id="arrow_l" src="../images/icons/arrow_left.png">
+                    <img id="arrow_r" src="../images/icons/arrow_right.png">
                 </div>    
             </article>
         
@@ -56,7 +56,7 @@ const seePopUp = (evt) => {
         
         
         <div id="column2">
-        <img src="./images/icons/x.png" class="remove_popup icon" id="det_remove">
+        <img src="../images/icons/x.png" class="remove_popup icon" id="det_remove">
             
             <article id="description">
                 <h1 id="product_heading">${e.name}</h1>
