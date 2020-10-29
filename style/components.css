@@ -1,0 +1,273 @@
+/*Inneholder styling til alle komponenter som brukes flere ganger på siden*/
+
+/*Buttons*/
+
+
+.btn_submit, .buyThis {
+    color: white;
+    background-color: #73434B;
+    border: none;
+    font-size: 2.5rem;
+    padding: .2em .5em;
+    text-transform: uppercase;
+}
+
+.filterBtn {
+    color: white;
+    background-color: #707312;
+    border: none;
+    font-size: 1.5rem;
+    padding: .2em .5em;
+    height: 3em;
+    border-radius: 2em;
+}
+
+.btn_submit:active, .buyThis:active {
+    border: 4px solid #2F3659;
+}
+
+button:hover, #btn_small:hover {
+    background-color: #A6831B;
+   
+}
+
+
+/*White box*/
+.box {
+    width: 20em;
+    height: 20em;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 3px 0px rgba(51, 51, 51, .42);
+}
+
+
+/*Tags*/
+.tag, .size_tag {
+    border: 4px solid #2F3659;
+    display: inline-flex;
+    padding: .5em;
+    border-radius: 30%;
+    margin-right: 1em;
+    margin-top: 1em;
+    color: #2F3659;
+    background-color: white;
+    font-family: "Open Sans";
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.tag:hover {
+    background-color: #A6831B;
+    color: white;
+    cursor: pointer;
+}
+
+.size_tag:hover {
+    background-color: #A6831B;
+    color: white;
+    cursor: pointer;
+}
+
+#tag-wrap {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+/*Color circles*/
+.clr_large, .clr_small {
+    border: none;
+    border-radius: 50%;
+    margin-right: 1em;
+    border: 1px solid black;
+}
+
+.clr_large {
+    width: 4em;
+    height: 4em;
+    border: none;
+}
+
+.clr_small {
+    width: 2em;
+    height: 2em;
+}
+
+
+/*Filter box*/
+.filter_container {
+    width: 40em;
+    height: auto;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter_container h3 {
+    padding-right: 5em;
+    margin-top: .5em;
+}
+
+.filter_content, #color_content {
+    display: flex;
+    margin: 1em auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/*icons*/
+.icon {
+    width: 3em;
+    height: 3em;
+} 
+
+
+/*Handlekurv*/
+#cart_wrap {
+    width: 60em;
+    height: auto;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+#heading_cart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;   
+}
+
+#cartH3, #num_items_cart  {
+    margin-right: 2em;
+}
+
+#removeCart {
+    position: relative;
+    left: 17em;
+}
+
+.item_wrap, #total_wrap {
+    display: grid;
+    grid-template-columns: 50% repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    gap: 3em;   
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+#item {
+    display: flex;
+    flex-direction: column;
+}
+
+.num_items {
+    width: 3em;
+}
+
+#totalsum {
+    grid-column: 3 / span 1;
+}
+
+#cart_icon {
+    margin-right: 1.5em;
+}
+
+.price {
+    color: #707312;
+}
+
+#total_wrap {
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+}
+
+
+/*Produkt - visningen av hvert enkelt produkt*/
+.product {
+    width: 25em;
+    height: 53em;
+    margin: 1em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product_img {
+    width: 100%;
+    height: 33em;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+#colors {
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.price {
+    margin: .5em auto;
+}
+
+
+/*Input - newsletter*/
+#news_wrap {
+    width: 100%;
+    height: 6em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+#inpNews {
+    width: 100%;
+    position: absolute;
+    font-size: 1.8rem;
+    z-index: 1;
+    height: 100%;
+    padding: .3em;
+}
+
+#btn_small {
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-color: #707312;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border: none;
+}
+
+#some_icons {
+    position: relative;
+    top: 7em;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5em;
+}
+
+.some_circle {
+    width: 4.5em;
+    height: 4.5em;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+}

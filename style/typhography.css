@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/woff/OpenSans-Regular.woff") format(woff);
+}
+
+@font-face {
+    font-family: "Exo2-Bold";
+    src: url("../fonts/woff/Exo2-Bold.woff") format(woff);  
+}
+@font-face {
+    font-family: "Exo2-Regular";
+    src: url("../fonts/woff/Exo2-Regular.woff") format(woff);  
+}
+
+html {
+    font-family: "Exo 2";
+    color: #2F3659;  
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2, .nav_text {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p, .footer_p, .footer_heading, label, .tag   {
+    font-family: "Open Sans";
+}
+
+.tag {
+    font-weight: 400;
+}
+
+p, label {
+    font-size: 2rem;
+}
+
+.radio_clr, .tag {
+    font-size: 1.8rem;
+}
+
+.footer_p, .footer_heading, .clr_radio {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.footer_heading {
+    font-weight: 800;
+}
+
+button {
+    font-family: "Open Sans";
+    font-weight: 500;
+}
+
+.item_heading {
+    font-weight: bold;
+}
+
+.item_detail {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+input {
+    font-family: "Exo 2";
+}

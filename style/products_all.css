@@ -1,0 +1,80 @@
+/*Inneholder styling for selve index-siden*/
+
+
+/*Pakker inn alt innhold*/
+#content-wrap {
+    display: grid;
+    grid-template-columns: 30%, 70%;
+    grid-template-rows: 1fr;
+    column-gap: 2em;
+    grid-auto-flow: row;
+}
+
+
+/*Fjern-filter-knapper*/
+#tag-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top:-4em;
+    left: 0;
+    width: 100%;
+}
+
+#clearFiltersReal {
+    position: relative;
+    top: 2em;
+    left: 10em;
+    
+}
+
+/*Pakker inn alle produktene som vises*/
+#products-grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2 / span 1;
+    
+}
+
+/*Handlekurven*/
+#cart_section {
+    position: absolute;
+    display: none;
+}
+
+/*Fargefiltersymboler*/
+
+#colorWrap {
+    display: flex;
+}
+
+.radio_clr {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Overlay når popup og handlekurv er aktiv*/
+#overlay {
+    width: 100%;
+    height: 400vh;
+    position: absolute;
+    z-index: -1;
+}
+
+/*Filter-buttons når de er aktive*/
+[data-active="1"] {
+    
+    border: 7px dashed #a6831b;
+}
+
+[data-checked="1"] {
+    background-color: #A6831B;
+    color: white;
+    border: 4px solid #2F3659;
+    
+}

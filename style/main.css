@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    background-color: #f9f9f8;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f8;
+}
+
+section {
+    margin-bottom: 5em;
+}
+
+article {
+    margin-bottom: 2em;
+}
+
