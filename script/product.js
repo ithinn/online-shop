@@ -56,7 +56,7 @@ const seePopUp = (evt) => {
         
         
         <div id="column2">
-        <img src="../images/icons/x.png" class="remove_popup icon" id="det_remove">
+        <img src="../images/icons/x.png" class="remove_popup icon" id="det_remove" alt="fjern popup-ikon">
             
             <article id="description">
                 <h1 id="product_heading">${e.name}</h1>
