@@ -105,7 +105,7 @@ const showInCart = (clr) => {
             </div>
 
         <h3 id="priceH3${i}" class="price">${findPrice(el)},-</h3>
-        <img id="remove${i}" src="./images/icons/x.png" class="icon remove" alt="fjern produktet fra handlelisten">
+        <img id="remove${i}" src="../images/icons/x.png" class="icon remove" alt="fjern produktet fra handlelisten">
             
         </div>
         `;     
