@@ -1,25 +1,17 @@
 const input = document.getElementById("inp_search");
-const val = input.value;
 
-//FINN PRODUKTENE BASERT PÅ INPUT-FELTETS VERDI
-const findProducts = (product, name) => {
-    
-    const productReturned = product.filter(el => {
-        return el.cathegory_main.toLowerCase() === name.toLowerCase() || el.name.toLowerCase() === name.toLowerCase() || el.cathegory_under.toLowerCase() === name.toLowerCase(); 
-        
+const search = e => {
+    let mySearch = e.target.value.toLowerCase();
+
+    let mySearchArr = products.filter((el) => {
+        return el.cathegory_main.toLowerCase().includes(mySearch) || el.cathegory_under.toLowerCase().includes(mySearch) || el.name.toLowerCase().includes(mySearch);
     })
-    addObjects(productReturned);
+
+    addObjects(mySearchArr);
     addEventButton();
-    return productReturned
 }
 
-//KALLER FIND PRODUCTS(?) OG LEGGER INN INPUT.VALUE SOM ARGUMENT
-const inputValueInn = () => {
-    console.log(findProducts(products, input.value));
-}
-
-//Lytter for search-input
-input.addEventListener("keyup", inputValueInn); 
+input.addEventListener("keyup", search);
 
 
 //BLA GJENNOM DE ULIKE SØKEORDENE I SØK-FELTET

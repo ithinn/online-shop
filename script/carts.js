@@ -1,11 +1,12 @@
 
-//global scope
+//Global scope
 let cart = [];
 let total = 0;
 let newItem = "";
 let buttons = document.querySelectorAll(".btn_submit");
 const jakker = document.querySelector("#jakker");
 const bukser = document.querySelector("#bukser");
+
 
 //--------------------------------------------------------------
 //SJEKK OM DET VALGTE PRODUKTET LIGGER I HANDLEKURVEN FRA FØR

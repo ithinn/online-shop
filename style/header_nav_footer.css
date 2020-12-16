@@ -16,7 +16,6 @@ header {
     width: 351px;
     height: 85px;
     margin-left: 5em;
-    
 }
 
 #symbols {
@@ -34,14 +33,17 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;   
+    margin-top: 3em
 }
 
 #search_wrapper {
     width: 100%;
-    height: 10em;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap:wrap;
+    margin-top: 1em;
 }
 
 #inp_search {
@@ -51,69 +53,34 @@ nav {
     border-bottom: 4px solid #2F3659;
     color: #2F3659;
     background-color: #f9f9f8;
-    width: 50%;
+    width: 100%;
+    margin: 0 1em;
 }
 
 #search {
     width: 5em;
     height: 5em;
-    margin-right: 3em;
+
+    display: none;
 }
 
+#clearSearch {
+    margin-top: 2em;
+}
 
 /*Footer*/
 footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #73434B;
     height: 300px;
-    margin-top: 30px;
-}
-
-.footer_ul {
-    list-style-type: none;
-    line-height: 28px;
-}
-
-.foot_article {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 20em;
-    margin-top: 5em;
-}
-
-#logo_neg {
-    width: 200px;
-    height: 60px;
-    margin-bottom: 1.5em;
-}
-
-#mar, #mar2 {
-    margin-left: 2.8em;
-}
-
-#inpNews {
-    top: 5em;
-}
-
-#btn_small {
-    top: 4.5em;
-    right: 0;
-}
-
-#news_wrap {
-    width: 23vw;   
 }
 
 #some_icons {
-    top: 12em;
-}
-
-#about {
-    width: 23vw;
-    align-self: center;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    width: 40vw;
+    justify-content: space-between
 }

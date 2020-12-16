@@ -13,7 +13,21 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #f9f9f8;
+    align-items: space-between;
+    overflow-x: hidden;
 }
+
+main {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+
 
 section {
     margin-bottom: 5em;

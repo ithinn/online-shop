@@ -11,7 +11,6 @@ const colorCodes =
     },
     {
         clrName: 'Blå',
-        //clrHex: "#5270ae"
         clrHex: "#5270ae"
     },
     {

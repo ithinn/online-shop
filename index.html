@@ -4,147 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snørrunger - alle produkter</title>
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/typhography.css">
-    <link rel="stylesheet" href="./style/components.css">
-    <link rel="stylesheet" href="./style/header_nav_footer.css">
-    <link rel="stylesheet" href="./style/products_all.css">
-    <link rel="stylesheet" href="./style/product.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/typhography.css">
+    <link rel="stylesheet" href="../style/components.css">
+    <link rel="stylesheet" href="../style/header_nav_footer.css">
+    <link rel="stylesheet" href="../style/products_all.css">
+    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="../style/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;800&family=Open+Sans&display=swap" rel="stylesheet">
-    
-    <script src="./script/colors.js" defer></script>
-    <script src="./script/product_list.js" defer></script>
-    <script src="./script/search.js" defer></script>
-    <script src="./script/mainFilter.js" defer></script>
-    <script src="./script/product.js" defer></script>
-    <script src="./script/listeners.js" defer></script>
-    <script src="./script/products_all.js" defer></script>
-    <script src="./script/carts.js" defer></script>
-    <script src="./script/cartStyle.js" defer></script>
+    <script src="../script/colors.js" defer></script>
+    <script src="../script/product_list.js" defer></script>
+    <script src="../script/search.js" defer></script>
+    <script src="../script/mainFilter.js" defer></script>
+    <script src="../script/product.js" defer></script>
+    <script src="../script/listeners.js" defer></script>
+    <script src="../script/products_all.js" defer></script>
+    <script src="../script/carts.js" defer></script>
+    <script src="../script/cartStyle.js" defer></script>
 </head>
 
 <body>
     <!--Slår inn når handlekurven eller popup er aktiv-->
     <div id="overlay"></div>
-    
-    <header>
 
+    <header>
         <!--Logo og handlekurvikon-->
         <div id="header_top">
-            <img id="logo" src="./images/icons/logo.png" alt="Snørrungers logo">
+            <img id="logo" src="../images/icons/logo.png" alt="Snørrungers logo">
             <div id="symbols">
-                <img class="icon" id="cart" src="./images/icons/cart.png" alt="handlekurv-ikon">
+                <img tabindex=0 class="icon" id="cart" src="../images/icons/cart.png" alt="">
                 <div id="number_items"></div>
             </div>
         </div>
         
         <!--Søkeseksjon-->
         <nav>
-            <h1>Finn ditt Snørrungeprodukt</h1>
+            <h2 id="search_text">Finn ditt produkt</h2>
             <div id="search_wrapper">
-                <img class="icon" id="search" src="./images/icons/search_symbol.png" alt="">
-                <input title="Søk etter produkter" type="search" id="inp_search" value="" placeholder="Søk etter produkter">
-                <button id="clearSearch" class="filterBtn">Nullstill søk</button>
-            </div>
+
+                <div id="inpAndIconWrap">
+                    <img class="icon" id="search" src="../images/icons/search_symbol.png" alt="">
+                    <input type="search" id="inp_search" value="", placeholder="Søk etter produkter">
+                </div>
+                
+                <div id="button_wrap">
+                    <button id="clearSearch" class="filterBtn">Nullstill søk og filter</button>
+                    <div id="showWrap">
+                        <input type="checkbox" id="showFilter" class="filterBtn"></input>
+                        <label id="showLabel" for=showFilter>Vis filter</label>
+                    </div>
+                    
+                </div>
+            </div>          
         </nav>
     </header>
     
-
-    <!--Nullstiller filter-->
-    <section id ="tag-wrap">
-        <button id="clearFiltersReal" class="filterBtn">Tøm filter</button>
-    </section>     
-    
-
-    <!--Alt innhold under headeren-->
-    <section id="content-wrap">
-        
-        <!--Filterseksjonen-->
-        <div id="filter_wrap"></div>
+    <main>
+        <section id="content-wrap">
             
-        <!--Produktlisten-->    
-        <section id="products-grid">
-            
-        </section>
-
-    </section>
-
-
-    <!--Pop-up når den er aktiv-->
-    <section class="box" id="grid-container"></section>
-    
-
-    <!--Handlekurv når den er aktiv-->
-    <section id="cart_section">
-        <article id="cart_wrap" class="box">
-            <div id="heading_cart">
-                <img id="cart_icon" class="icon" src="./images/icons/cart.png" alt="handlekurv-ikon">
-                <div id="cartH3"> 
-                    <h3>Handlekurv</h3>
-                </div>
-                <div id="num_items_cart"></div>
-                <img id="removeCart" src="./images/icons/x.png" class="icon" alt="fjern handlekurv">
+            <!--Filterseksjonen-->
+            <div id="filter_wrap" tabindex=0>
+                <section id ="tag-wrap">
+                    <button id="clearFiltersReal" class="filterBtn">Tøm filter</button>
+                </section> 
             </div>
-    
-            <div id="new_item"></div>  
-    
-            <div id="total_wrap">
-                <h4>Du skal betale:</h4>
-                <div id="total">
-                    <h3 class="price">0,-</h3>
-                </div>
-            </div>
-            <button id="pay_btn" class="btn_submit">Gå til betaling</button>
-        </article>
-        </section>
-
-
-    <!--Footer-->
-    <footer>
-        <article class="foot_article">
-            <img id="logo_neg" src="./images/icons/logo_neg.png" alt="logoen til Snørrunger">
-            <p id="about" class="footer_p">Vi startet som en ide, og ble fort en realitet. Vi vil ha akkurat passelig varme barn som elsker å være ute - uansett vær. Hos oss finner du klær som er testet av barn, og som er produsert på en bærekraftig måte. </p>
-        </article>
-    
-        <article class="foot_article">
-            <p class="footer_heading">Om Snørrunger</p>
-            <ul class="footer_ul">
-                <li class="footer_p">Nyheter og presse</li>
-                <li class="footer_p">Ledige stillinger</li>
-                <li class="footer_p">Bærekraftige snørrunger</li>
-                <li class="footer_p">Finn butikker</li>
-            </ul>
-        </article>
-    
-        <article class="foot_article">
-            <p id="mar2" class="footer_heading">Kundeservice</p>
-            <ul class="footer_ul">
-                <li class="footer_p">Slik handler du</li>
-                <li class="footer_p">Slik angrer du</li>
-                <li class="footer_p">Kontakt</li>  
-            </ul>
-        </article>
-    
-        <article class="foot_article">
-            <p class="footer_heading">Nyhetsbrev</p>
-            <p class="footer_p">Registrer deg nå og få 10% rabatt</p>
                 
-            <article id="news_wrap">
-                <input title="Fyll inn epost for å motta nyhetsbrev" id="inpNews" type="email" placeholder="Epost">
-                <button id="btn_small" type="submit">Send</button>
-            </article> 
-    
-            <article id="some_icons">
-                <div class="some_circle">
-                    <img class="icon" src="./images/icons/insta.png" alt="instagram icon">
+            <!--Produktlisten-->    
+            <section id="products-grid"></section>
+
+        </section>
+
+
+        <!--Pop-up når den er aktiv-->
+        <section class="box" id="grid-container"></section>
+        
+
+        <!--Handlekurv når den er aktiv-->
+        <section id="cart_section">
+            <article id="cart_wrap" class="box">
+                <div id="heading_cart">
+                    <img id="cart_icon" class="icon" src="../images/icons/cart.png" alt="handlekurv-ikon">
+                    <div id="cartH3"> 
+                        <h3>Handlekurv</h3>
+                    </div>
+                    <div id="num_items_cart"></div>
+                    <img id="removeCart" src="../images/icons/x.png" class="icon";>
                 </div>
-                <div class="some_circle">
-                    <img class="icon" src="./images/icons/Twitter_Social_Icon_Circle_Color.png" alt="twitter icon">
+        
+                <div id="new_item"></div>  
+        
+                <div id="total_wrap">
+                    <h4>Du skal betale:</h4>
+                    <div id="total">
+                        <h3 class="price">0,-</h3>
+                    </div>
                 </div>
-                <div class="some_circle">
-                    <img class="icon" src="./images/icons/f_logo_RGB-Black_114.png" alt="facebook icon">
-                </div>  
+                <button id="pay_btn" class="btn_submit">Gå til betaling</button>
             </article>
+        </section>
+    </main>    
+
+    <footer>
+        <article id="some_icons">
+            <div class="some_circle">
+                <img class="icon" src="../images/icons/insta.png">
+            </div>
+            <div class="some_circle">
+                <img class="icon" src="../images/icons/Twitter_Social_Icon_Circle_Color.png">
+            </div>
+            <div class="some_circle">
+                <img class="icon" src="../images/icons/f_logo_RGB-Black_114.png">
+            </div>  
         </article>
     </footer> 
 </body>

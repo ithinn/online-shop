@@ -9,15 +9,14 @@ let clrChosen;
 
 //OPPRETT POPUP-VINDU MED DETALJVISNING
 
-const seePopUp = (evt) => {
+const seePopUp = evt => {
     
     let id = evt.target.id;
-   
+    
     popUp.style.opacity = "1";
-    popUp.style.right = "10%";
-    popUp.style.top = "30em";
+    popUp.style.top = "1em";
     overlay.style.backgroundColor = "rgba(0, 0, 0, .5)";
-    overlay.style.zIndex = "0";
+    overlay.style.zIndex = "6";
 
     let html="";
     let fargesymbol = "";
@@ -26,6 +25,7 @@ const seePopUp = (evt) => {
 
     //Finner produktets id og henter ut kun tallet
     let prodId = Number(id.slice(-1));
+    
     
     //Går gjennom produktlista 
     products.forEach(e => {
@@ -37,8 +37,9 @@ const seePopUp = (evt) => {
         if(prodId == e.id) {
            
             html += `
-            <div id="column1">
+            <div id="column1" tagindex=0>
             <article id="main_container">
+            <img src="../images/icons/x.png" class="remove_popup icon" id="det_remove" tagindex=0>
                 <img id="main_img" alt="Foto av ${e.cathegory_main} med produktnavn ${e.name}" src=${e.url[0]}>
                 <div id="arrows">
                     <img id="arrow_l" src="../images/icons/arrow_left.png">
@@ -53,11 +54,8 @@ const seePopUp = (evt) => {
             </article>
         </div>
 
-        
-        
         <div id="column2">
-        <img src="../images/icons/x.png" class="remove_popup icon" id="det_remove" alt="fjern popup-ikon">
-            
+        
             <article id="description">
                 <h1 id="product_heading">${e.name}</h1>
                 <p id="ingress">${e.ingress}</p>
@@ -129,11 +127,9 @@ const seePopUp = (evt) => {
     fjern = document.getElementById("det_remove");
     fjern.addEventListener("click", removePopUp);
     addEventButton();   
-
-    //sett fokus
-    document.getElementById("colorButton0").focus();
 }
 
+console.log(popUp.innerHTML);
 //-----------------------------------------------------------------------------
 
 //FJERNER POPUP-VINDU
@@ -142,6 +138,7 @@ const removePopUp = () => {
         popUp.style.right = "200em";
         popUp.style.top = "30em";
         overlay.style.zIndex = "-1"
+        
 }
 
 //------------------------------------------------------------------------------

@@ -2,7 +2,7 @@ let categoryArray = ["Jakker", "Bukser"];
 let c_u_arr = ['Dunjakke', 'Skalljakke', 'Fleece', 'Regnjakke', "Overtrekksbukse", "Regnbukse", "Ullbukse" ];
 let allSizes = [86, 92, 98, 104, 110, 116, 122];
 let qualities = ['vannavstøtende', 'vindtett', 'vanntett', 'varm', 'strikk'];
-let colors = ['#707312', '#c1272d', '#5270ae', '#333333', '#5e5c5c', "#73434b"];
+let colors = ['#707312', '#c1272d', '#96acd9', '#333333', '#808080', "#73434b"];
 const filterWrap = document.getElementById("filter_wrap");
 let uniCat = [];
 let mainCatArray = [];
@@ -53,6 +53,33 @@ const viewFilters = () => {
 }
 
 viewFilters();
+
+const showFilterWindow = e => {
+    const label = document.getElementById("showLabel");
+    if (e.target.checked) {
+        filterWrap.style.display = "flex";
+        label.innerText = "Skjul filter"
+    } else {
+        filterWrap.style.display = "none"; 
+        label.innerText = "Vis filter"
+    } 
+}
+
+const showFilterKeydown = e => {
+       
+    if (e.key === "Enter" || e.key === "Escape") {
+    e.target.checked ? e.target.checked = false : e.target.checked = true;
+    }
+
+    showFilterWindow(e);
+}
+
+
+const visBtn = document.getElementById("showFilter");
+visBtn.addEventListener("click", showFilterWindow);
+visBtn.addEventListener("keydown", showFilterKeydown);
+//filterWrap.addEventListener("keydown", showFilterKeydown);    
+
 
 
 //ADD CATHEGORIES TO THE FILTER SECTION
@@ -239,9 +266,9 @@ const addColor = (a) => {
             <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}"  class="tag clr_large radio_clr" style="background-color: #707312; color: #ffffff;">${hexToClr(el)}</button>
             `; 
     
-        } else if (el === '#5270ae') {
+        } else if (el === '#96acd9') {
             html += `
-            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #5270ae; color: #ffffff;">${hexToClr(el)}</button>
+            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #96acd9; color: #ffffff;">${hexToClr(el)}</button>
             `; 
     
         } else if (el === '#333333') {
@@ -253,9 +280,9 @@ const addColor = (a) => {
             <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #73434b; color: #ffffff;">${hexToClr(el)}</button>
             `; 
     
-        } else if (el === '#5e5c5c') {
+        } else if (el === '#808080') {
             html += `
-            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #5e5c5c; color: #ffffff;">${hexToClr(el)}</button>
+            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #808080; color: #ffffff;">${hexToClr(el)}</button>
             `; 
         }
    })
@@ -308,7 +335,7 @@ filterWrap.addEventListener("click", (e) => {
 let mainCatChoosen = false,underCatChoosen = false, sizeCatSelected = false;
 let mainHolderArray = [], subHolderArray = [], sizeHolderArray = [];
 
-const applyFilter = (evt) => {
+const applyFilter = evt => {
 
     //Endrer value til en checkbox basert på om den er checked eller ikke, og endrer style hvis den er det. 
     if (evt.target.value == "unchecked"){
@@ -394,8 +421,6 @@ const removeFilters = (evt) => {
 
 
 //Oppretter lytter for Tøm-filter-knappen og nullstill-søk-knappen
-const clearBtn = document.getElementById("clearFiltersReal");
-clearBtn.addEventListener("click", removeFilters);
 
 const clearSearch = document.getElementById("clearSearch");
 clearSearch.addEventListener("click", removeFilters);
