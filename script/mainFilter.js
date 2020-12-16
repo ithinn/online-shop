@@ -2,7 +2,7 @@ let categoryArray = ["Jakker", "Bukser"];
 let c_u_arr = ['Dunjakke', 'Skalljakke', 'Fleece', 'Regnjakke', "Overtrekksbukse", "Regnbukse", "Ullbukse" ];
 let allSizes = [86, 92, 98, 104, 110, 116, 122];
 let qualities = ['vannavstøtende', 'vindtett', 'vanntett', 'varm', 'strikk'];
-let colors = ['#707312', '#c1272d', '#96acd9', '#333333', '#808080', "#73434b"];
+let colors = ['#707312', '#c1272d', '#5270ae', '#333333', '#808080', "#73434b"];
 const filterWrap = document.getElementById("filter_wrap");
 let uniCat = [];
 let mainCatArray = [];
@@ -240,7 +240,7 @@ const addColor = (a) => {
 
             for (let k = 0; k < a[i].color.length; k++) {
                 clr = a[i].color[k];
-
+                console.log(clr);
                 if(clr === colors[j]) {
 
                     clrArr.push(clr);
@@ -251,9 +251,12 @@ const addColor = (a) => {
         }
     }; 
 
+    console.log(clrArr);
+
     //lag ny liste med bare sizeUnike verdier
     clrUni = clrArr.filter(onlysizeUnique);
     
+    console.log(clrUni);
     
     //Sørg for at den nye listen vises på siden
     clrUni.forEach((el, i) => {                
@@ -266,9 +269,9 @@ const addColor = (a) => {
             <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}"  class="tag clr_large radio_clr" style="background-color: #707312; color: #ffffff;">${hexToClr(el)}</button>
             `; 
     
-        } else if (el === '#96acd9') {
+        } else if (el === '#5270ae') {
             html += `
-            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #96acd9; color: #ffffff;">${hexToClr(el)}</button>
+            <button data-active="0" value="unchecked" type="radio" name="c" id="${hexToClr(el)}" class="tag clr_large radio_clr" style="background-color: #5270ae; color: #ffffff;">${hexToClr(el)}</button>
             `; 
     
         } else if (el === '#333333') {

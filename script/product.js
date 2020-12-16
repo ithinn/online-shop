@@ -2,7 +2,6 @@
 let popUp = document.querySelector("#grid-container");
 let fjern = "";
 let colorSelected;
-
 let sizeSelected;
 let clrChosen;
 //---------------------------------------------------------------------------- 
@@ -129,7 +128,6 @@ const seePopUp = evt => {
     addEventButton();   
 }
 
-console.log(popUp.innerHTML);
 //-----------------------------------------------------------------------------
 
 //FJERNER POPUP-VINDU
